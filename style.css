@@ -1,0 +1,143 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: system-ui;
+}
+.hero{
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-image: url(images/night.jpg);
+	background-position: center;
+	position: relative;
+	overflow-x: hidden;
+}
+.hero img{
+	width: 100%;
+	height: 100vh;
+}
+.road{
+	height: 200px;
+	width: 500%;
+	display: block;
+	position: absolute;
+	top: 435px;
+	/*bottom: 0;*/
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background-image: url(images/road.jpg);
+	background-repeat: repeat-x;
+	animation: road 6s linear infinite;
+}
+
+@keyframes road{
+	100%{
+		transform: translateX(-3400px);
+	}
+	/*50%{
+		transform: translateX(-3500px);
+	}
+	100%{
+		transform: translateX(-3500px);
+	}*/
+}
+.city{
+	background-image: url(images/city.png);
+	height: 200px;
+	width: 500%;
+	display: block;
+	position: absolute;
+	top: 235px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background-repeat: repeat-x;
+	animation: city 20s linear infinite;
+}
+@keyframes city{
+	100%{
+		transform: translateX(-1400px);
+	}
+}
+.car{
+	width: 400px;
+	left: 50%;
+	bottom: 60px;
+	/*top: 100px;*/
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 2;
+}
+.car img{
+	width: 80%;
+	height: 22vh;
+
+	animation: car 1s linear infinite;
+}
+@keyframes car{
+	100%{
+		transform: translateY(-2px);
+	}
+	50%{
+		transform: translateY(2px);
+	}
+	0%{
+		transform: translateY(-2px);
+	}
+}
+.wheel{
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 2;
+	bottom: 130px;
+}
+.wheel img{
+	width: 55px;
+	height: 55px;
+	animation: wheel 1s linear infinite;
+}
+.wheel_f{
+	left: 25px;
+	position: absolute;
+}
+.wheel_b{
+	left: -170px;
+	position: absolute;
+}
+
+@keyframes wheel{
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+.headline p{
+	position: relative;
+	font-size: 2em;
+	z-index: 1;
+	left: 35%;
+	top: 50px;
+}
+p{
+	width: 0ch;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: text 6s infinite;
+	border-right: 4px solid white;
+	animation-delay: 1s;
+}
+@keyframes text{
+	0%{
+		width: 0ch;
+	}
+	50%{
+		width: 15ch;
+	}
+}
+.moon img{
+	width: 10%;
+	height: 120px;
+	right: 25px;
+}
